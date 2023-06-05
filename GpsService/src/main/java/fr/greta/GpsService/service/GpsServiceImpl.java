@@ -1,7 +1,7 @@
 package fr.greta.GpsService.service;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+//import com.sun.org.slf4j.internal.Logger;
+//import com.sun.org.slf4j.internal.LoggerFactory;
 import fr.greta.GpsService.exception.ElementNotFoundException;
 import fr.greta.GpsService.model.FromLibraryToModelConvertor;
 import gpsUtil.GpsUtil;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class GpsServiceImpl implements GpsService{
-    private  static  final Logger LOGGER = LoggerFactory.getLogger(GpsServiceImpl.class);
+    //private  static  final Logger LOGGER = LoggerFactory.getLogger(GpsServiceImpl.class);
     private final GpsUtil gpsUtil;
 
 
