@@ -8,16 +8,17 @@ import gpsUtil.location.VisitedLocation;
 import jakarta.annotation.Priority;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Profile;
 import tripPricer.Provider;
 
-import java.sql.Date;
+
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.*;
 import java.util.stream.IntStream;
 
-//@Priority("test")
+@Profile("test")
 public class InternalTestInitializer {
 
 
@@ -32,7 +33,7 @@ public class InternalTestInitializer {
             String userName = "internalUser" + i;
             String phone = "0000";
             String email = userName + "@tourGuide.comp";
-            Date date = (Date) Date.from(Instant.now());
+            Date date = Date.from(Instant.now());
             List<VisitedLocation> visitedLocations = new ArrayList<>();
             List<UserReward> userRewards = new ArrayList<>();
             UserPreferences userPreferences = new UserPreferences();

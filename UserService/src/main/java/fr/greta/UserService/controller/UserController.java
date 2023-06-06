@@ -11,14 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/usrers")
+@RequestMapping("/users")
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
-
-
     private UserService userService;
-
     public UserController(UserService userService) {
         this.userService = userService;
     }

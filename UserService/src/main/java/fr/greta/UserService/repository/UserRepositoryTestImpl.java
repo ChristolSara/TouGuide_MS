@@ -19,8 +19,11 @@ public class UserRepositoryTestImpl implements UserRepository{
 
     private final Map<String,User> internalUserMap ;
 
-    public UserRepositoryTestImpl(Map<String, User> internalUserMap) {
-        this.internalUserMap = internalUserMap;
+    public UserRepositoryTestImpl() {
+        LOGGER.info("TestMode enabled");
+        LOGGER.debug("Initializing users");
+        internalUserMap = new InternalTestInitializer().initializeInternalUsers();
+        LOGGER.debug("Finished initializing users");
     }
 
     @Override
