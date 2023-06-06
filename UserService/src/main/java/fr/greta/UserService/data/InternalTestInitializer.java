@@ -17,7 +17,7 @@ import java.time.ZoneOffset;
 import java.util.*;
 import java.util.stream.IntStream;
 
-@Priority("test")
+//@Priority("test")
 public class InternalTestInitializer {
 
 

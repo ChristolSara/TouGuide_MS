@@ -1,10 +1,15 @@
 package fr.greta.UserService.repository;
 
+import fr.greta.UserService.data.InternalTestInitializer;
 import fr.greta.UserService.user.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -12,7 +17,7 @@ import java.util.Optional;
 public class UserRepositoryTestImpl implements UserRepository{
     private static final Logger LOGGER = LoggerFactory.getLogger(UserRepositoryTestImpl.class);
 
-    private final Map<String,User> internalUserMap;
+    private final Map<String,User> internalUserMap ;
 
     public UserRepositoryTestImpl(Map<String, User> internalUserMap) {
         this.internalUserMap = internalUserMap;
@@ -20,21 +25,28 @@ public class UserRepositoryTestImpl implements UserRepository{
 
     @Override
     public List<User> findAll() {
-        return null;
+        LOGGER.info("Finding All user : ");
+        return new ArrayList<>(internalUserMap.values());
     }
 
     @Override
     public Optional<User> findByUsername(String username) {
-        return Optional.empty();
+        LOGGER.info("Finding user : "+ username);
+        User user = internalUserMap.get(username);
+        return Optional.ofNullable(user);
     }
 
     @Override
     public boolean existsByUsername(String username) {
-        return false;
+        LOGGER.info("checking if user : "+ username +" exist. ");
+        return internalUserMap.containsKey(username);
     }
 
     @Override
     public User save(User user) {
-        return null;
+        LOGGER.info("Saving user : " + user );
+        return internalUserMap.containsKey(user.getUsername()) ?
+                internalUserMap.replace(user.getUsername(),user):
+                internalUserMap.put(user.getUsername(),user);
     }
 }

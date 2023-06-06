@@ -1,7 +1,7 @@
 package fr.greta.UserService.user;
 
-import org.openclassrooms.tourguide.models.model.location.Attraction;
-import org.openclassrooms.tourguide.models.model.location.VisitedLocation;
+import gpsUtil.location.VisitedLocation;
+import gpsUtil.location.Attraction;
 
 public class UserReward {
 

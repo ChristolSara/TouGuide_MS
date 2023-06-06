@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.deser.std.DateDeserializers;
 import com.fasterxml.jackson.databind.ser.std.DateSerializer;
-import org.openclassrooms.tourguide.models.model.location.VisitedLocation;
-import org.openclassrooms.tourguide.models.model.trip.Provider;
+import gpsUtil.location.VisitedLocation;
+import tripPricer.Provider;
 
 import java.util.ArrayList;
 import java.util.Date;
