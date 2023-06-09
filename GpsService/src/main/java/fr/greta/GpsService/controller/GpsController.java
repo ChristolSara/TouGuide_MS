@@ -2,9 +2,10 @@ package fr.greta.GpsService.controller;
 //
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
+import fr.greta.GpsService.model.location.Attraction;
+import fr.greta.GpsService.model.location.VisitedLocation;
 import fr.greta.GpsService.service.GpsService;
-import gpsUtil.location.Attraction;
-import gpsUtil.location.VisitedLocation;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,13 +22,13 @@ public class GpsController {
 
    private final GpsService gpsService;
 
-    public GpsController(GpsService gpsService) {
-        this.gpsService = gpsService;
+    public GpsController(final GpsService gpsService1) {
+        gpsService = gpsService1;
 
     }
 
-    @GetMapping("/attractions/{attractionname}")
-    public Attraction getAttractionInformation(@PathVariable final String attractionName) {
+    @GetMapping("/attractions/{attractionName}")
+    public fr.greta.GpsService.model.location.Attraction getAttractionInformation(@PathVariable final String attractionName) {
         LOGGER.info("getting attraction "+ attractionName);
         return gpsService.getAttraction(attractionName);
     }

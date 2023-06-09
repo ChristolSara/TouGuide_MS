@@ -2,9 +2,10 @@ package fr.greta.GpsService.service;
 
 import fr.greta.GpsService.exception.ElementNotFoundException;
 import fr.greta.GpsService.model.FromLibraryToModelConvertor;
+import fr.greta.GpsService.model.location.Attraction;
+import fr.greta.GpsService.model.location.VisitedLocation;
 import gpsUtil.GpsUtil;
-import gpsUtil.location.Attraction;
-import gpsUtil.location.VisitedLocation;
+
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
@@ -19,21 +20,19 @@ public class GpsServiceImpl implements GpsService{
     private  static  final Logger LOGGER = LoggerFactory.getLogger(GpsServiceImpl.class);
     private final GpsUtil gpsUtil;
 
-
 //constructeur avc parametres
     public GpsServiceImpl(final GpsUtil gpsUtil1) {
-       gpsUtil = gpsUtil1;
+       this.gpsUtil = gpsUtil1;
         Locale.setDefault(Locale.US);
     }
 
     @Override
     public Attraction getAttraction(final String attractionName) {
-
-        LOGGER.info("search for attraction with name " + attractionName);
+        LOGGER.info("Search for attraction with name " + attractionName);
         return FromLibraryToModelConvertor.convertAttraction(gpsUtil.getAttractions().stream()
                 .filter(attraction -> attractionName.equals(attraction.attractionName))
                 .findAny()
-                .orElseThrow(() -> new ElementNotFoundException("attraction with name :"+ attractionName + " was not found")));
+                .orElseThrow(() -> new ElementNotFoundException("Attraction with name : " + attractionName + " was not found.")));
     }
 
     @Override

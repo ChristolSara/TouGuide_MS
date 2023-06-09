@@ -6,7 +6,6 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/GpsService" />
-        <option name="gradleJvm" value="openjdk-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/GpsService" />
@@ -16,7 +15,6 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/RewardService" />
-        <option name="gradleJvm" value="openjdk-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/RewardService" />
@@ -26,7 +24,6 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/TrackerService" />
-        <option name="gradleJvm" value="openjdk-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/TrackerService" />
@@ -36,20 +33,9 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/TripService" />
-        <option name="gradleJvm" value="openjdk-19" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/TripService" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/UserService" />
-        <option name="gradleJvm" value="openjdk-19" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/UserService" />
           </set>
         </option>
       </GradleProjectSettings>
