@@ -5,10 +5,11 @@ import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import static org.springframework.http.RequestEntity.get;
-
+@Service
 public class RewardServiceImpl implements RewardService {
 
 
@@ -16,7 +17,7 @@ public class RewardServiceImpl implements RewardService {
     private final WebClient webClientRewardApi;
 
     public RewardServiceImpl(@Qualifier("getWebClientRewardApi")final WebClient webClientRewardApi1) {
-        this.webClientRewardApi = webClientRewardApi1;
+     webClientRewardApi = webClientRewardApi1;
     }
 
     @Override

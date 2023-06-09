@@ -23,11 +23,11 @@ public class RewardExecutorImpl implements  RewardExecutor {
 
     private final ExecutorService executor;
 
-    public RewardExecutorImpl(LocationService locationService1, RewardService rewardService1, UserService userService1) {
-        this.locationService = locationService1;
-        this.rewardService = rewardService1;
-        this.userService = userService1;
-        this.executor = Executors.newFixedThreadPool(16);
+    public RewardExecutorImpl(final LocationService locationService1,final RewardService rewardService1,final UserService userService1) {
+        locationService = locationService1;
+       rewardService = rewardService1;
+        userService = userService1;
+      executor = Executors.newFixedThreadPool(16);
     }
 
 

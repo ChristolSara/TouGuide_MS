@@ -17,7 +17,7 @@ public class WebClientConfig {
     @Bean
     public WebClient getWebClientUserApi(){
         return WebClient.builder()
-                .baseUrl("http://localhost:8086")
+                .baseUrl("http://localhost:8084")
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
                 .build();
     }
@@ -35,8 +35,12 @@ public class WebClientConfig {
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
                 .build();
     }
-
-
-
+    @Bean
+    public WebClient getWebClientTripsApi(){
+        return  WebClient.builder()
+                .baseUrl("http://localhost:8085")
+                .clientConnector(new ReactorClientHttpConnector(httpClient))
+                .build();
+    }
 
 }

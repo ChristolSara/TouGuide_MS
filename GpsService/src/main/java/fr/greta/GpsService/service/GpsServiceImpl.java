@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
 import java.util.stream.Collectors;
 
 @Service
 public class GpsServiceImpl implements GpsService{
-    private  static  final Logger LOGGER = (Logger) LoggerFactory.getLogger(GpsServiceImpl.class);
+    private  static  final Logger LOGGER = LoggerFactory.getLogger(GpsServiceImpl.class);
     private final GpsUtil gpsUtil;
 
 
