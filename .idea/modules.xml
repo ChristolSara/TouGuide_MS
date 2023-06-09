@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GpsService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/GpsService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TouGuide_MS.iml" filepath="$PROJECT_DIR$/.idea/TouGuide_MS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrackerService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TrackerService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TripService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TripService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserService.main.iml" />
     </modules>
   </component>
 </project>
