@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import tripPricer.Provider;
 import tripPricer.TripPricer;
 
+
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -23,7 +24,7 @@ public class TripServiceImpl implements TripService{
 
     private static final String tripPricerApiKey = "test_server_api_key";
     @Override
-    public List<Provider> getTripDeal(UUID userId, int numberOfAdults, int numberOfChildren, int tripDuration, int cumulativeRewardPoints) {
+    public List<Provider> getTripDeals(UUID userId, int numberOfAdults, int numberOfChildren, int tripDuration, int cumulativeRewardPoints) {
         LOGGER.info("getting trip deals for user : "+userId);
 
         return tripPricer.getPrice(tripPricerApiKey,

@@ -1,7 +1,7 @@
 package fr.greta.TripService.model;
 
+
 import tripPricer.Provider;
-import tripPricer.TripPricer;
 
 public class FromLibreryToModelConvertor {
 

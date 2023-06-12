@@ -28,7 +28,11 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation files('libs/gpsUtil.jar','libs/RewardCentral.jar','libs/TripPricer.jar')
+	implementation files('libs/gps-utils/libs/gpsUtil.jar')
+	implementation files('libs/reward-central/libs/RewardCentral.jar')
+	implementation files('libs/trip-pricer/libs/TripPricer.jar')
+	implementation files('libs/models')
+
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-ws
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-ws', version: '1.4.7.RELEASE'
 }

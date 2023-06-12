@@ -2,9 +2,6 @@ package fr.greta.UserService.repository;
 
 import fr.greta.UserService.data.InternalTestInitializer;
 import fr.greta.UserService.user.User;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

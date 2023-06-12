@@ -36,6 +36,6 @@ public class TripController {
 
         LOGGER.info("Getting trips deals for user "+ username);
 
-        return  tripService.getTripDeal(userId,numberOfAdults,numberOfChildren,tripDuration,cumulativeRewardPoints);
+        return  tripService.getTripDeals(userId,numberOfAdults,numberOfChildren,tripDuration,cumulativeRewardPoints);
     }
 }
