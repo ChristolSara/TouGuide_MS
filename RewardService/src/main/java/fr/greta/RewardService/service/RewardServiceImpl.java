@@ -7,13 +7,13 @@ import rewardCentral.RewardCentral;
 
 import java.util.UUID;
 @Service
-public class RewardServieImpl implements  RewardService{
+public class RewardServiceImpl implements  RewardService{
 
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RewardServieImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RewardServiceImpl.class);
     private  final RewardCentral rewardCentral;
 
-    public RewardServieImpl(final RewardCentral rewardCentral) {
+    public RewardServiceImpl(final RewardCentral rewardCentral) {
         this.rewardCentral = rewardCentral;
     }
 
