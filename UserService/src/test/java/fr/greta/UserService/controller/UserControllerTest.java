@@ -63,9 +63,6 @@ public class UserControllerTest {
                 .andExpect(status().isOk());
     }
 
-
-    // GET USER LOCATION TESTS //
-
     @Test
     void getExistingUserLocation() throws Exception {
         when(userService.getUserCurrentLocation(anyString())).thenReturn(visitedLocation);
@@ -79,8 +76,6 @@ public class UserControllerTest {
         mockMvc.perform(get("/users/{username}/current-location", user.getUsername()))
                 .andExpect(status().isNotFound());
     }
-
-    // GET USER REWARDS TESTS //
 
     @Test
     void getExistingUserRewards() throws Exception {

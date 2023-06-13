@@ -9,5 +9,6 @@ import java.util.UUID;
 public interface TripService {
 
 
-    List<Provider> getTripDeals(UUID userId, int numberOfAdults, int numberOfChildren, int tripDuration , int cumulativeRewardPoints);
+    List<Provider> getTripDeals(UUID userId, int numberOfAdults,
+                                int numberOfChildren, int tripDuration, int cumulativeRewardPoints);
 }
