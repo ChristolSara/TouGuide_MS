@@ -1,8 +1,10 @@
 package fr.greta.TrackerService.service;
 
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.Attraction;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.Location;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.VisitedLocation;
+
+
+import fr.greta.TrackerService.models.location.Attraction;
+import fr.greta.TrackerService.models.location.Location;
+import fr.greta.TrackerService.models.location.VisitedLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class LocationServiceImpl implements  LocationService{
-    private static final Logger LOGGER= LoggerFactory.getLogger(LocationService.class);
+    private static final Logger LOGGER= LoggerFactory.getLogger(LocationServiceImpl.class);
     private final WebClient webClientGpsApi;
 
     public LocationServiceImpl(@Qualifier("getWebClientGpsApi")final WebClient webClientGpsApi1) {
@@ -63,7 +65,7 @@ public class LocationServiceImpl implements  LocationService{
     }
     private static final double STATUTE_MILES_PER_NAUTICAL_MILE = 1.15077945;
 
-    private double getDistance(Location location1,Location location2){
+    private double getDistance(Location location1, Location location2){
         LOGGER.info("getting distance between " +  location1 +" and "+location2);
         double latitude1 = Math.toRadians(location1.getLatitude());
         double longitude1 = Math.toRadians(location1.getLongitude());

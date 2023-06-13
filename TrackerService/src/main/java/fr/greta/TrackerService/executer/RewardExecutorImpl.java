@@ -1,11 +1,12 @@
 package fr.greta.TrackerService.executer;
 
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.Attraction;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.User;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.UserReward;
+
+import fr.greta.TrackerService.models.location.Attraction;
 import fr.greta.TrackerService.service.LocationService;
 import fr.greta.TrackerService.service.RewardService;
 import fr.greta.TrackerService.service.UserService;
+import fr.greta.TrackerService.models.user.User;
+import fr.greta.TrackerService.models.user.UserReward;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ import java.util.concurrent.*;
 
 @Service
 public class RewardExecutorImpl implements  RewardExecutor {
-    private static  final Logger LOGGER = LoggerFactory.getLogger(RewardExecutor.class);
+    private static  final Logger LOGGER = LoggerFactory.getLogger(RewardExecutorImpl.class);
     private final LocationService locationService;
     private final RewardService rewardService;
     private final UserService userService;

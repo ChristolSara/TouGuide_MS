@@ -14,13 +14,7 @@ public class WebClientConfig {
     private final HttpClient httpClient = HttpClient.create(ConnectionProvider.builder("fixed").pendingAcquireMaxCount(-1).build());
 
 
-    @Bean
-    public WebClient getWebClientUserApi(){
-        return WebClient.builder()
-                .baseUrl("http://localhost:8084")
-                .clientConnector(new ReactorClientHttpConnector(httpClient))
-                .build();
-    }
+
     @Bean
     public WebClient getWebClientGpsApi(){
         return WebClient.builder()
@@ -29,16 +23,16 @@ public class WebClientConfig {
                 .build();
     }
     @Bean
-    public WebClient getWebClientRewardsApi(){
+    public WebClient getWebClientRewardApi(){
         return  WebClient.builder()
                 .baseUrl("http://localhost:8083")
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
                 .build();
     }
     @Bean
-    public WebClient getWebClientTripsApi(){
-        return  WebClient.builder()
-                .baseUrl("http://localhost:8085")
+    public WebClient getWebClientUserApi(){
+        return WebClient.builder()
+                .baseUrl("http://localhost:8084")
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
                 .build();
     }

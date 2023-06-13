@@ -1,8 +1,8 @@
 package fr.greta.TrackerService.Tracker;
 
 import fr.greta.TrackerService.executer.TrackerExecutor;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.User;
 import fr.greta.TrackerService.service.UserService;
+import fr.greta.TrackerService.models.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.commons.lang3.time.StopWatch;

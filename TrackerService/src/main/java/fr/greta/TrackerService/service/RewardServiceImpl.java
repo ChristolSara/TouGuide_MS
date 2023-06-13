@@ -1,19 +1,18 @@
 package fr.greta.TrackerService.service;
 
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.Attraction;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.User;
+import fr.greta.TrackerService.models.location.Attraction;
+import fr.greta.TrackerService.models.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import static org.springframework.http.RequestEntity.get;
 @Service
 public class RewardServiceImpl implements RewardService {
 
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RewardService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RewardServiceImpl.class);
     private final WebClient webClientRewardApi;
 
     public RewardServiceImpl(@Qualifier("getWebClientRewardApi")final WebClient webClientRewardApi1) {
@@ -21,7 +20,7 @@ public class RewardServiceImpl implements RewardService {
     }
 
     @Override
-    public int getAttractionsRewardPoint(final Attraction attraction,final User user) {
+    public int getAttractionsRewardPoint(final Attraction attraction, final User user) {
         LOGGER.info("getting attraction reward point for attraction " + attraction.getAttractionName()+" and user "+user.getUsername());
 
         return webClientRewardApi

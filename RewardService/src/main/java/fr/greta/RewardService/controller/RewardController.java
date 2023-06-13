@@ -16,8 +16,8 @@ public class RewardController {
 
     private  final RewardService rewardService;
 
-    public RewardController(RewardService rewardService) {
-        this.rewardService = rewardService;
+    public RewardController(RewardService rewardService1) {
+        this.rewardService = rewardService1;
     }
 
     @GetMapping("/rewards")

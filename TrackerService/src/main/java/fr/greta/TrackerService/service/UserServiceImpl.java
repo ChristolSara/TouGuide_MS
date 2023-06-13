@@ -1,8 +1,9 @@
 package fr.greta.TrackerService.service;
 
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.location.VisitedLocation;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.User;
-import fr.greta.TrackerService.models.src.main.java.org.openclassrooms.tourguide.models.model.user.UserReward;
+import fr.greta.TrackerService.models.location.VisitedLocation;
+import fr.greta.TrackerService.models.user.User;
+import fr.greta.TrackerService.models.user.UserReward;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
