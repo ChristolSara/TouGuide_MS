@@ -19,16 +19,17 @@ import java.util.concurrent.*;
 public class RewardExecutorImpl implements  RewardExecutor {
     private static  final Logger LOGGER = LoggerFactory.getLogger(RewardExecutorImpl.class);
     private final LocationService locationService;
-    private final RewardService rewardService;
     private final UserService userService;
+    private final RewardService rewardService;
+
 
     private final ExecutorService executor;
 
-    public RewardExecutorImpl(final LocationService locationService1,final RewardService rewardService1,final UserService userService1) {
+    public RewardExecutorImpl(final LocationService locationService1,final UserService userService1, final RewardService rewardService1) {
         locationService = locationService1;
        rewardService = rewardService1;
         userService = userService1;
-      executor = Executors.newFixedThreadPool(16);
+      executor = Executors.newFixedThreadPool(100);
     }
 
 
